@@ -8,7 +8,12 @@
 <style>
     :root{ --bg:#dbeafe; --text:#0b1220; --muted:#334155; --border:#c7d2fe; --card:#ffffff; --accent:#1e40af }
     *{box-sizing:border-box}
-    body{margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; background:linear-gradient(160deg,#dbeafe,#c7d2fe,#e2e8f0); color:var(--text) color:var(--text)}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(160deg,#dbeafe,#c7d2fe,#e2e8f0);
+  color:var(--text);
+}
     header{position:sticky; top:0; background:#ffffffcc; backdrop-filter: blur(6px); border-bottom:1px solid var(--border); z-index:10}
     .container{max-width:1000px; margin:0 auto; padding:18px}
     .row{display:flex; align-items:center; justify-content:space-between; gap:12px}
@@ -137,18 +142,19 @@
 <div class="logo">🛡️</div>
 <div>
 <div class="muted" id="subtitle" style="font-size:12px"></div>
-<div id="title-en" style="font-weight:800; font-size:18px; display:none;">Your Guide to Safe Cyber Behaviors</div></div>
+<div id="title-en" style="font-weight:800; font-size:18px;">Your Guide to Safe Cyber Behaviors</div></div>
 </div>
 <div class="controls">
 </div>
+    </div>
 </header>
 <main class="container">
 
-</div><div class="hero" id="hero-en"><h1>Your cybersecurity starts from your safe practices and habits!</h1><p class="muted">Five cyber practices that help keep you safe across online services and digital environments.<br/>Learn why each practice matters, what are practical advice to apply it, and common mistakes to avoid.</p></div>
+<div class="hero" id="hero-en"><h1>Your cybersecurity starts from your safe practices and habits!</h1><p class="muted">Five cyber practices that help keep you safe across online services and digital environments.<br/>Learn why each practice matters, what are practical advice to apply it, and common mistakes to avoid.</p></div>
 
 
 <!-- English Content -->
-<div dir="ltr" id="content-en" lang="en" style="display:none">
+<div dir="ltr" id="content-en" lang="en">
 
 <section class="beh beh-step beh-step-en" data-step="1">
 <h2>
@@ -330,13 +336,9 @@ Backing Up Important Data
   <label for="en-b5">After finishing reading this section, please tick this box to move to the next behaviour</label>
 </div>
 
-  
 
-<!-- ✅ END AR: hidden until step 5 is checked -->
-
-
-</div>
 </section>
+    </div>
 
 <!-- ✅ END EN: hidden until step 5 is checked -->
 <div id="endEn" style="display:none;">
@@ -479,15 +481,10 @@ document.querySelectorAll('.beh-check').forEach(cb=>{
 });
 
 
-
-  showStep();
-}
-
 document.documentElement.lang = 'en';
 document.documentElement.dir = 'ltr';
 showStep();
-/* ===== تشغيل ===== */
-setLang(currentLang);
+
 
 })();
 </script>
